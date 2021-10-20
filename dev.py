@@ -2,6 +2,14 @@ import requests as rq
 from pprint import pprint
 kad_numbers = []
 
+
+# cn_numbers = [
+#     '52:18:0050135:91',
+#     '52:18:0050135:222',
+#     '52:18:0050135:11',
+#     '52:18:0070179:1083'
+# ]
+
 with open('test_kad.txt') as f:
     for number in f:
         kad_numbers.append(number.strip())
