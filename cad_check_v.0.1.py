@@ -1,6 +1,7 @@
 import requests as rq
 import json
 from pprint import pprint
+from deepdiff import DeepDiff
 
 
 def create_cad_base(cad_numbers):
@@ -36,12 +37,12 @@ def create_cad_base(cad_numbers):
 
     with open('cad_base.json', 'w', encoding='utf-8') as f:
         json.dump(objects_data, f, ensure_ascii=False, indent=4)
+    print('Cadastre base successful created!')
 
 
 def check_cad_base(cad_base):
     objects_data = {}
     for number in cad_base:
-        print(number)
 
         resp = rq.get(
             url=f'http://rosreestr.ru/fir_lite_rest/api/gkn/fir_lite_object/{number}'
@@ -69,33 +70,33 @@ def check_cad_base(cad_base):
             'address': address,
             'cost': cost
         }
-    # pprint(objects_data)
-    pprint(cad_base)
 
-    if objects_data.items() == cad_base.items:
-        print('YES')
+    if DeepDiff(objects_data, cad_base):
+        print('New data detected!')
+        pprint(DeepDiff(objects_data, cad_base))
+        with open('cad_base.json', 'w', encoding='utf-8') as f:
+            json.dump(objects_data, f, ensure_ascii=False, indent=4)
+            print('New data successful saved to base!')
     else:
-        print('Warning!')
-
-    # with open('cad_base.json', 'w', encoding='utf-8') as f:
-    #     json.dump(objects_data, f, ensure_ascii=False, indent=4)
+        print('Saved data is up to date!')
 
 
 try:
     with open('cad_base.json', encoding='utf-8') as f:
+        print('Cadastre base successful detected!')
         base = json.load(f)
         check_cad_base(base)
 
 
 except IOError:
+    print('Cadastre base does not detected! Trying to find cadastre numbers list.')
     try:
         with open('cad_numbers.txt', encoding='utf-8') as f:
+            print('Cadastre numbers list detected!')
             numbers = []
             for num in f:
                 numbers.append(num.strip())
             create_cad_base(numbers)
 
     except IOError:
-        print('File does not exist!')
-
-
+        print('Cadastre numbers list does not detected!')
