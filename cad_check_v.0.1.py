@@ -51,17 +51,14 @@ def main():
     try:
         with open('cad_base.json', encoding='utf-8') as f:
             print('Cadastre base successful detected!')
-            base = json.load(f)
-            check_cad_base(base)
+            check_cad_base(json.load(f))
     except IOError:
-        print('Cadastre base does not detected! Trying to find cadastre numbers list.')
+        print('Cadastre base does not detected! '
+              'Trying to find cadastre numbers list.')
         try:
-            with open('cad_numbers.txt', encoding='utf-8') as f:
+            with open('cad_numbers.json', encoding='utf-8') as f:
                 print('Cadastre numbers list detected!')
-                cad_nums = []
-                for num in f:
-                    cad_nums.append(num.strip())
-                create_cad_base(cad_nums)
+                create_cad_base(json.load(f))
         except IOError:
             print('Cadastre numbers list does not detected!')
 
