@@ -1,0 +1,14 @@
+{% extends "home/base.html" %}
+
+{% block title %}
+opencad
+{% endblock %}
+
+{% block content %}
+    {% for object in result %}
+        <h2>{{ object.title }}</h2>
+        <h4>{{ object }}</h4>
+        <p>{{ object.cad_nums }}</p>
+        <br>
+{% endfor %}
+{% endblock %}

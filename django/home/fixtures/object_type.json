@@ -1,0 +1,34 @@
+[
+    {
+        "model": "home.objecttype",
+        "pk": 1,
+        "fields": {
+            "name": "building",
+            "verbose_name": "Здание"
+        }
+    },
+    {
+        "model": "home.objecttype",
+        "pk": 2,
+        "fields": {
+            "name": "construction",
+            "verbose_name": "Сооружение"
+        }
+    },
+    {
+        "model": "home.objecttype",
+        "pk": 3,
+        "fields": {
+            "name": "parcelData",
+            "verbose_name": "Земельный участок"
+        }
+    },
+    {
+        "model": "home.objecttype",
+        "pk": 4,
+        "fields": {
+            "name": "flat",
+            "verbose_name": "Помещение"
+        }
+    }
+]
