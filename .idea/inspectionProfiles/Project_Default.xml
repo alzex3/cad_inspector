@@ -1,0 +1,14 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="phones.models.Phone.objects" />
+          <option value="books.models.Book.objects" />
+          <option value="orm_migrations.school.models.Student.objects" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

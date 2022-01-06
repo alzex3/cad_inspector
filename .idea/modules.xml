@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../django_hw_2/.idea/django_hw_2.iml" filepath="$PROJECT_DIR$/../django_hw_2/.idea/django_hw_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../django_hw_3/.idea/django_hw_3.iml" filepath="$PROJECT_DIR$/../django_hw_3/.idea/django_hw_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../django_hw_4/.idea/django_hw_4.iml" filepath="$PROJECT_DIR$/../django_hw_4/.idea/django_hw_4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../django_hw_5/.idea/django_hw_5.iml" filepath="$PROJECT_DIR$/../django_hw_5/.idea/django_hw_5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../django_hw_6/.idea/django_hw_6.iml" filepath="$PROJECT_DIR$/../django_hw_6/.idea/django_hw_6.iml" />
+      <module fileurl="file://$USER_HOME$/Documents/GitHub/homework/.idea/homework.iml" filepath="$USER_HOME$/Documents/GitHub/homework/.idea/homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/opencad.iml" filepath="$PROJECT_DIR$/.idea/opencad.iml" />
+    </modules>
+  </component>
+</project>
