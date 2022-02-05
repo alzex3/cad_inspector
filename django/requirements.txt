@@ -1,0 +1,6 @@
+django
+django-filter
+djangorestframework
+psycopg2
+requests
+deepdiff
